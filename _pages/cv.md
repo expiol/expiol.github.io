@@ -11,54 +11,59 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* **B.Sc. Information and Computing Science**, Xi’an Jiaotong-Liverpool University (XJTLU), Suzhou, China, *Sep 2022 – Present*  
+  Relevant courses: Computer Networks, Linear Algebra, Advanced Java Programming, Data Structures, Databases, Computer Systems, Software Engineering  
 
-Work experience
+Research Experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* **Leveraging Large Language Models for CTF Challenge Solving**  
+  *XJTLU Laboratory, Suzhou, China* — *Aug 2024 – Oct 2024*  
+  Advisor: Prof. Wenjun Fan  
+  - Built an automated penetration testing framework based on PentestGPT  
+  - Combined decision-tree analysis, command execution, and LLM-based feedback loop to optimize CTF solving  
+  - Research accepted at *TrustCom Conference 2024*  
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+  - Investigating implicit knowledge invocation and unauthorized exploitation risks in Chain-of-Thought reasoning  
+  - Project: *The Invisible Mind: Auditing Unauthorized Knowledge Exploitation in Latent CoT Reasoning*  
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
+Work Experience
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* **Operations & Security Intern**, Edixa (Anhui), Hefei, China — *Jan 2025 – Feb 2025*  
+  - Monitored core IT systems with Linux operations tools  
+  - Automated monitoring and incident response using Shell/Python scripts  
+  - Configured firewalls and vulnerability scanners (Nmap, OpenVAS)  
+
+* **Security Research Intern**, DBAPPSecurity Central Research Institute, Hangzhou, China — *May 2025 – Jul 2025*  
+  - Developed components of a security agent for malicious traffic analysis  
+  - Designed behavioral analysis modules for fine-grained alert classification (successful/failed attacks, false positives, disguised traffic)  
+  - Produced structured threat intelligence to support IDS filtering and attacker behavior detection  
 
 Publications
 ======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
+<ul>{% for post in site.publications reversed %}
+  {% include archive-single-cv.html %}
+{% endfor %}</ul>
+
 Talks
 ======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
+<ul>{% for post in site.talks reversed %}
+  {% include archive-single-talk-cv.html  %}
+{% endfor %}</ul>
+
 Teaching
 ======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
+<ul>{% for post in site.teaching reversed %}
+  {% include archive-single-cv.html %}
+{% endfor %}</ul>
+
+Skills
 ======
-* Currently signed in to 43 different slack teams
+* **Languages**: Chinese (native), English (fluent)  
+* **Programming**: Python, Java, C/C++, LaTeX  
+* **Cybersecurity Practice**: Active CTF competitor  
+
+Service and Leadership
+======
+* Contributor to CTF-related research projects integrating Large Language Models  
+* Collaboration with academic and industry labs on cybersecurity and AI safety  
+
