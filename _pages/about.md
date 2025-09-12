@@ -1,8 +1,10 @@
 ---
-layout: archive
-title: "About"
-permalink: /about/
+permalink: /
+title: "Yang Hong - Academic Homepage"
 author_profile: true
+redirect_from: 
+  - /about/ 
+  - /about.html
 ---
 
 I am **Yang Hong**, an undergraduate student in **Information and Computing Science** at [Xi’an Jiaotong-Liverpool University (XJTLU)](https://www.xjtlu.edu.cn/en/), Suzhou, China.  
