@@ -21,10 +21,11 @@ Research Experience
   Advisor: Prof. Wenjun Fan  
   - Built an automated penetration testing framework based on PentestGPT  
   - Combined decision-tree analysis, command execution, and LLM-based feedback loop to optimize CTF solving  
-  - Research accepted at *TrustCom Conference 2024*  
+  - Research published at *TrustCom Conference 2024* (Y. Zou, Y. Hong, et al.)
 
   - Investigating implicit knowledge invocation and unauthorized exploitation risks in Chain-of-Thought reasoning  
-  - Project: *The Invisible Mind: Auditing Unauthorized Knowledge Exploitation in Latent CoT Reasoning*  
+  - Project: *The Invisible Mind: Auditing Unauthorized Knowledge Exploitation in Latent CoT Reasoning*
+  - Manuscript in preparation for *ICLR 2026*
 
 Work Experience
 ======
