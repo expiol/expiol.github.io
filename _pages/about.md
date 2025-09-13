@@ -8,11 +8,11 @@ redirect_from:
 ---
 
 I am **Yang Hong**, an undergraduate student in **Information and Computing Science** at [Xi’an Jiaotong-Liverpool University (XJTLU)](https://www.xjtlu.edu.cn/en/), Suzhou, China.  
-
-My research focuses on the intersection of **cybersecurity** and **artificial intelligence**, especially the applications and risks of **Large Language Models (LLMs)** in:  
-- Automated penetration testing and CTF challenge solving  
-- Security agents for threat detection and adversarial behavior analysis  
-- Auditing sensitive information leakage in implicit reasoning processes  
+where I will be awarded a **dual degree** from both XJTLU and the [University of Liverpool](https://www.liverpool.ac.uk/).
+My research lies at the intersection of cybersecurity and artificial intelligence. I am particularly interested in:
+- Investigating the privacy and security of large language models (LLMs), with a focus on implicit reasoning and sensitive information leakage.
+- Exploring multi-agent systems for scalable security analysis and adversarial behavior modeling
+- Developing automated penetration testing
 
 
 ---
