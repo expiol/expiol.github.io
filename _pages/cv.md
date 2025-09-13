@@ -28,12 +28,12 @@ Research Experience
 
 Work Experience
 ======
-* **Operations & Security Intern**, edscha (Anhui), Hefei, China — *Jan 2025 – Feb 2025*  
+* **Operations & Security Intern**, edscha (Hefei), Hefei, China — *Jan 2025 – Feb 2025*  
   - Monitored core IT systems with Linux operations tools  
   - Automated monitoring and incident response using Shell/Python scripts  
-  - Configured firewalls and vulnerability scanners (Nmap, OpenVAS)  
+  - Configured firewalls and vulnerability scanners 
 
-* **Security Research Intern**, DBAPPSecurity Central Research Institute, Hangzhou, China — *May 2025 – Jul 2025*  
+* **Security Research Intern**, DBAPPSecurity Central Research Institute, Hangzhou, China — *May 2025 – Aug 2025*  
   - Developed components of a security agent for malicious traffic analysis  
   - Designed behavioral analysis modules for fine-grained alert classification (successful/failed attacks, false positives, disguised traffic)  
   - Produced structured threat intelligence to support IDS filtering and attacker behavior detection  
