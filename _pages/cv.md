@@ -24,7 +24,6 @@ Research Experience
   - Research published at *TrustCom Conference 2024* (Y. Zou, Y. Hong, et al.)
 
   - Investigating implicit knowledge invocation and unauthorized exploitation risks in Chain-of-Thought reasoning  
-  - Project: *The Invisible Mind: Auditing Unauthorized Knowledge Exploitation in Latent CoT Reasoning*
   - Manuscript in preparation for *ICLR 2026*
 
 Work Experience
