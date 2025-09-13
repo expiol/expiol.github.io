@@ -11,13 +11,13 @@ repository               : "expiol/expiol.github.io"   # Replace with your repo 
 
 # Site Author - Sidebar Information
 author:
-  avatar           : "profile.png"
+  avatar           : "1.png"
   name             : "Yang Hong"
   pronouns         : "he/him"  
   bio              : "Undergraduate researcher in cybersecurity and large language models at XJTLU."
   location         : "Suzhou, China"
   employer         : "Xi’an Jiaotong-Liverpool University"
-  uri              : 
+  uri              : https://expiol.github.io
   email            : "yang.hong22@student.xjtlu.edu.cn"
 
   # Academic websites
