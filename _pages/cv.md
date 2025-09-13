@@ -11,8 +11,8 @@ redirect_from:
 
 Education
 ======
-* **B.Sc. Information and Computing Science**, Xi’an Jiaotong-Liverpool University (XJTLU), Suzhou, China, *Sep 2022 – Present*  (GPA (WES): 3.53 / 4.0  )
-  Relevant courses: Computer Networks, Linear Algebra, Advanced Java Programming, Data Structures, Databases, Computer Systems, Software Engineering  
+* **B.Sc. Information and Computing Science**, Xi’an Jiaotong-Liverpool University (XJTLU), Suzhou, China, *Sep 2022 – Present*  
+  Relevant courses: Computer Networks, Linear Algebra, Advanced Java Programming, Data Structures, Databases, Computer Systems, Software Engineering  (GPA (WES): 3.53 / 4.0  )
 
 Research Experience
 ======
