@@ -49,7 +49,7 @@ Skills
 ======
 * **Languages**: Chinese (native), English (fluent)  
 * **Programming**: Python, Java, C/C++, LaTeX  
-* **Cybersecurity Practice**: Active CTF competitor  
+* **Cybersecurity Practice**: Active CTF competitor(web)
 
 Service and Leadership
 ======
