@@ -36,12 +36,11 @@ author:
 
 # Publication Categories
 publication_category:
-  books:
-    title: 'Books'
+  published:
+    title: "Published Papers"
   manuscripts:
-    title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
+    title: "Manuscripts"
+
 
 # Site Settings
 teaser                   : 
