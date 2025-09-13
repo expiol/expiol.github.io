@@ -28,7 +28,7 @@ Research Experience
 
 Work Experience
 ======
-* **Operations & Security Intern**, edscha (Hefei), Hefei, China — *Jan 2025 – Feb 2025*  
+* **Operations & Security Intern**, edscha (AnHui), Hefei, China — *Jan 2025 – Feb 2025*  
   - Monitored core IT systems with Linux operations tools  
   - Automated monitoring and incident response using Shell/Python scripts  
   - Configured firewalls and vulnerability scanners 
