@@ -1,6 +1,7 @@
 ---
 title: "Leveraging Large Language Models for Challenge Solving in Capture-the-Flag"
 collection: publications
+category: published
 permalink: /publication/2024-trustcom-ctf-llm
 excerpt: 'This paper introduces an automated LLM-based framework for solving Capture-the-Flag challenges, bridging penetration testing and AI research.'
 date: 2024-12-01
