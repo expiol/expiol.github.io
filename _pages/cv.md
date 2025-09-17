@@ -18,7 +18,7 @@ Research Experience
 ======
 * **Leveraging Large Language Models for CTF Challenge Solving**  
   *XJTLU Laboratory, Suzhou, China* — *Aug 2024 – Oct 2024*  
-  Advisor: Prof. Wenjun Fan  
+  Advisor: [Prof. Wenjun Fan](https://directory.tacoma.uw.edu/employee/wjfan)  
   - Built an automated penetration testing framework based on PentestGPT  
   - Combined decision-tree analysis, command execution, and LLM-based feedback loop to optimize CTF solving  
   - Research published at *TrustCom Conference 2024* (Y. Zou, Y. Hong, et al.)
