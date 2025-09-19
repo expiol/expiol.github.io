@@ -15,10 +15,12 @@ redirect_from:
   <h1 style="margin-bottom:0.2rem">Yang Hong</h1>
   <p style="margin:0.2rem 0 0.6rem 0;">B.Sc. Information &amp; Computing Science @ XJTLU</p>
   <p style="margin:0;">
-    <a href="mailto:yang.hong22@student.xjtlu.edu.cn"><i class="fas fa-envelope"></i> yang.hong22@student.xjtlu.edu.cn</a>
+    <a href="mailto:yang.hong22@student.xjtlu.edu.cn">
+      <i class="fas fa-envelope"></i> yang.hong22@student.xjtlu.edu.cn
     </a>
   </p>
 </div>
+
 
 
 
