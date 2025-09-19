@@ -1,58 +1,84 @@
 ---
-layout: archive
-title: "CV"
+layout: single
+title: "Curriculum Vitae"
 permalink: /cv/
 author_profile: true
+toc: true
+toc_sticky: true
+toc_label: "On this page"
 redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+<!-- ===== Header / Contacts ===== -->
+<div class="notice--primary" style="margin-top:0">
+  <h1 style="margin-bottom:0.2rem">Yang Hong</h1>
+  <p style="margin:0.2rem 0 0.6rem 0;">B.Sc. Information &amp; Computing Science @ XJTLU</p>
+  <p style="margin:0;">
+    <a href="mailto:yang.hong22@student.xjtlu.edu.cn"><i class="fas fa-envelope"></i> yang.hong22@student.xjtlu.edu.cn</a>
+    </a>
+  </p>
+</div>
 
-Education
-======
-* **B.Sc. Information and Computing Science**, Xi’an Jiaotong-Liverpool University (XJTLU), Suzhou, China, *Sep 2022 – Present*  
-  Relevant courses: Computer Networks, Linear Algebra, Advanced Java Programming, Data Structures, Databases, Computer Systems, Software Engineering  (GPA (WES): 3.53 / 4.0  )
+<!-- ===== Summary ===== -->
+## Summary
+Undergraduate researcher focusing on **LLM security**, **CTF automation**, and **AI-driven security operations**. Experience across academia and industry labs building agentic systems for penetration testing and alert triage; publications/under-review work in trustworthy AI and security.
 
-Research Experience
-======
-* **Leveraging Large Language Models for CTF Challenge Solving**  
-  *XJTLU Laboratory, Suzhou, China* — *Aug 2024 – Oct 2024*  
-  Advisor: [Prof. Wenjun Fan](https://directory.tacoma.uw.edu/employee/wjfan)  
-  - Built an automated penetration testing framework based on PentestGPT  
-  - Combined decision-tree analysis, command execution, and LLM-based feedback loop to optimize CTF solving  
-  - Research published at *TrustCom Conference 2024* (Y. Zou, Y. Hong, et al.)
+<!-- ===== Education ===== -->
+## Education
+**Xi’an Jiaotong–Liverpool University (XJTLU)** — *Suzhou, China*  
+B.Sc. in Information and Computing Science, *Sep 2022 – Present*  
+GPA (WES): **3.53 / 4.0**  
+**Relevant courses:** Computer Networks, Linear Algebra, Advanced Java Programming, Data Structures, Databases, Computer Systems, Software Engineering
 
-  - Investigating implicit knowledge invocation and unauthorized exploitation risks in Chain-of-Thought reasoning  
-  - Manuscript in preparation for *ICLR 2026*
+<!-- ===== Research Experience ===== -->
+## Research Experience
 
-Work Experience
-======
-* **Operations & Security Intern**, edscha (AnHui), Hefei, China — *Jan 2025 – Feb 2025*  
-  - Monitored core IT systems with Linux operations tools  
-  - Automated monitoring and incident response using Shell/Python scripts  
-  - Configured firewalls and vulnerability scanners 
+**Leveraging Large Language Models for CTF Challenge Solving** — *XJTLU Laboratory, Suzhou, China*  
+*Aug 2024 – Oct 2024* — Advisor: [Prof. Wenjun Fan](https://directory.tacoma.uw.edu/employee/wjfan)  
+- Built an automated penetration testing framework based on **PentestGPT**  
+- Combined decision-tree analysis, command execution, and LLM feedback loops to optimize CTF solving  
+- Research published at *TrustCom 2024* (Y. Zou, **Y. Hong**, et al.)
 
-* **Security Research Intern**, DBAPPSecurity Central Research Institute, Hangzhou, China — *May 2025 – Aug 2025*  
-  - Developed components of a security agent for malicious traffic analysis  
-  - Designed behavioral analysis modules for fine-grained alert classification (successful/failed attacks, false positives, disguised traffic)  
-  - Produced structured threat intelligence to support IDS filtering and attacker behavior detection  
+- Investigating implicit knowledge invocation and privacy risks in latent Chain-of-Thought reasoning  
+- Manuscript in preparation for *ICLR 2026* (under review)
 
-Publications
-======
-<ul>{% for post in site.publications reversed %}
+**AI-driven Automation for Security Alert Triage** — *DBAPPSecurity Central Research Institute, Hangzhou, China*  
+*May 2025 – Aug 2025* — Advisor: Shaoxing Ye  
+- Developed components of a security agent for **malicious traffic analysis**  
+- Designed behavioral analysis modules for **fine-grained alert classification** (successful/failed attacks, false positives, disguised traffic)  
+- Produced structured **threat intelligence** to support IDS filtering and attacker behavior detection
+
+**LLM-Driven Penetration Testing Framework** — *University of Washington Tacoma (collab), Suzhou, China*  
+*Aug 2025 – Present* — Advisor: [Prof. Wenjun Fan](https://directory.tacoma.uw.edu/employee/wjfan)  
+- Initiating a self-designed, LLM-driven pentest framework beyond PentestGPT  
+- Early work: modular multi-agent prototype (recon + exploit synthesis) and small-scale evaluation setup
+
+<!-- ===== Work / Internship Experience ===== -->
+## Work Experience
+
+**Operations & Security Intern**, edscha (AnHui) — *Hefei, China*  
+*Jan 2025 – Feb 2025*  
+- Monitored core IT systems with Linux operations tools  
+- Automated monitoring and incident response using Shell/Python scripts  
+- Configured firewalls and vulnerability scanners
+
+<!-- ===== Publications ===== -->
+## Publications
+
+<ul>
+{% for post in site.publications reversed %}
   {% include archive-single-cv.html %}
-{% endfor %}</ul>
+{% endfor %}
+</ul>
 
+<!-- ===== Skills ===== -->
+## Skills
+**Programming:** Python, Java, C/C++, LaTeX  
+**Cybersecurity:** CTF (Web), penetration testing, malware traffic analysis  
+**Languages:** Chinese (native), English (fluent)
 
-Skills
-======
-* **Languages**: Chinese (native), English (fluent)  
-* **Programming**: Python, Java, C/C++, LaTeX  
-* **Cybersecurity Practice**: Active CTF competitor(web)
-
-Service and Leadership
-======
-* Contributor to CTF-related research projects integrating Large Language Models  
-* Collaboration with academic and industry labs on cybersecurity and AI safety  
-
+<!-- ===== Service & Leadership ===== -->
+## Service & Leadership
+- Contributor to CTF-related research integrating Large Language Models  
+- Collaboration with academic and industry labs on cybersecurity and AI safety
