@@ -20,9 +20,7 @@ redirect_from:
   </p>
 </div>
 
-<!-- ===== Summary ===== -->
-## Summary
-Undergraduate researcher focusing on **LLM security**, **CTF automation**, and **AI-driven security operations**. Experience across academia and industry labs building agentic systems for penetration testing and alert triage; publications/under-review work in trustworthy AI and security.
+
 
 <!-- ===== Education ===== -->
 ## Education
