@@ -11,12 +11,18 @@ redirect_from:
 ---
 
 <!-- ===== Header / Contacts ===== -->
+
 <div class="notice--primary" style="margin-top:0">
   <h1 style="margin-bottom:0.2rem">Yang Hong</h1>
   <p style="margin:0.2rem 0 0.6rem 0;">B.Sc. Information &amp; Computing Science @ XJTLU</p>
   <p style="margin:0;">
     <a href="mailto:yang.hong22@student.xjtlu.edu.cn">
       <i class="fas fa-envelope"></i> yang.hong22@student.xjtlu.edu.cn
+    </a>
+  </p>
+  <p style="margin:0;">
+    <a href="mailto:Y.Hong23@student.liverpool.ac.uk">
+      <i class="fas fa-envelope"></i> Y.Hong23@student.liverpool.ac.uk
     </a>
   </p>
 </div>
