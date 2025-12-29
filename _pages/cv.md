@@ -47,7 +47,7 @@ GPA (WES): **3.53 / 4.0**
 - Research published at *TrustCom 2024* (Y. Zou, **Y. Hong**, et al.)
 
 - Investigating implicit knowledge invocation and privacy risks in latent Chain-of-Thought reasoning  
-- Manuscript in preparation for *ICLR 2026* (under review)
+- Under review at ICLR 2026
 
 **AI-driven Automation for Security Alert Triage** — *DBAPPSecurity Central Research Institute, Hangzhou, China*  
 *May 2025 – Aug 2025* — Advisor: Shaoxing Ye  
