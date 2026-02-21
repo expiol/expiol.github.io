@@ -53,7 +53,7 @@ GPA (WES): **3.53 / 4.0**
 - Produced structured **threat intelligence** to support IDS filtering and attacker behavior detection
 
 **LLM-Driven Penetration Testing Framework** — *University of Washington Tacoma (collab), Suzhou, China*  
-*Aug 2025 – Present* — Advisor: [Prof. Wenjun Fan](https://directory.tacoma.uw.edu/employee/wjfan)  
+*Aug 2025 – Present* — Research Assistant, Advisors: [Prof. Along Jin](https://scholar.xjtlu.edu.cn/en/persons/AlongJin/) (XJTLU) & [Prof. Wenjun Fan](https://directory.tacoma.uw.edu/employee/wjfan) (UW Tacoma)  
 - Initiating a self-designed, LLM-driven pentest framework beyond PentestGPT  
 - Early work: modular multi-agent prototype (recon + exploit synthesis) and small-scale evaluation setup
 
