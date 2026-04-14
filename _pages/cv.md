@@ -20,11 +20,6 @@ redirect_from:
       <i class="fas fa-envelope"></i> yang.hong22@student.xjtlu.edu.cn
     </a>
   </p>
-  <p style="margin:0;">
-    <a href="mailto:Y.Hong23@student.liverpool.ac.uk">
-      <i class="fas fa-envelope"></i> Y.Hong23@student.liverpool.ac.uk
-    </a>
-  </p>
 </div>
 
 
