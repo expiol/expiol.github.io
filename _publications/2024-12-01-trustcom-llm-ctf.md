@@ -2,12 +2,26 @@
 title: "Leveraging Large Language Models for Challenge Solving in Capture-the-Flag"
 collection: publications
 category: published
+topic: penetration-testing
+slug: trustcom-ctf-llm
+venue_short: TrustCom
+authors: [Yuwen Zou, Yang Hong, Jingyi Xu, Lekun Liu, Wenjun Fan]
+summary: "An LLM-based framework for CTF challenge solving with automated tool execution and human-validated evaluation."
 permalink: /publication/2024-trustcom-ctf-llm
 excerpt: 'This paper introduces an automated LLM-based framework for solving Capture-the-Flag challenges, bridging penetration testing and AI research.'
 date: 2024-12-01
 venue: '2024 IEEE 23rd International Conference on Trust, Security and Privacy in Computing and Communications (TrustCom)'
 paperurl: 'https://ieeexplore.ieee.org/document/10944976'
 citation: 'Y. Zou, <b>Y. Hong</b>, J. Xu, L. Liu and W. Fan, "Leveraging Large Language Models for Challenge Solving in Capture-the-Flag," <i>2024 IEEE 23rd International Conference on Trust, Security and Privacy in Computing and Communications (TrustCom)</i>, Sanya, China, 2024, pp. 1541-1550. doi: 10.1109/TrustCom63139.2024.00213.'
+bibtex: |
+  @inproceedings{zou2024ctf,
+    title = {Leveraging Large Language Models for Challenge Solving in Capture-the-Flag},
+    author = {Yuwen Zou and Yang Hong and Jingyi Xu and Lekun Liu and Wenjun Fan},
+    booktitle = {2024 IEEE 23rd International Conference on Trust, Security and Privacy in Computing and Communications (TrustCom)},
+    year = {2024},
+    pages = {1541--1550},
+    doi = {10.1109/TrustCom63139.2024.00213}
+  }
 ---
 **Keywords**: Privacy; Large language models; Knowledge based systems; Collaboration; Problem-solving; Mirrors; Penetration testing; Multi-agent systems; Large Language Models; LLM Agent; Capture the Flag; Penetration Testing  
 

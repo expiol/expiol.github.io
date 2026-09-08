@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="{{ site.locale | slice: 0, 2 }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% assign page_title = page.title %}
+  {% unless page.home %}{% assign page_title = page.title | append: ' - ' | append: site.title %}{% endunless %}
+  {% assign page_description = page.description | default: page.summary | default: site.description %}
+  <title>{{ page_title | escape }}</title>
+  <meta name="description" content="{{ page_description | escape }}">
+  <meta name="author" content="{{ site.author.name }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{{ page_title | escape }}">
+  <meta property="og:description" content="{{ page_description | escape }}">
+  <meta property="og:type" content="{% if page.collection == 'publications' %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <link rel="icon" type="image/svg+xml" href="{{ '/images/monogram.svg' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/academic.css' | relative_url }}">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="site-name" href="{{ '/' | relative_url }}">{{ site.author.name }}</a>
+      <div class="nav-links">{% for link in site.data.navigation.main %}
+        <a href="{{ link.url | relative_url }}"{% if page.url == link.url %} aria-current="page"{% endif %}>{{ link.title }}</a>
+      {% endfor %}</div>
+    </nav>
+  </header>
+  <div class="site-shell">
+    <aside class="profile" aria-label="About Yang Hong">
+      <a class="portrait-link" href="{{ '/' | relative_url }}" aria-label="Yang Hong's homepage">
+        <img class="portrait" src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="Portrait of Yang Hong" width="168" height="168" fetchpriority="high">
+      </a>
+      <div class="profile-details">
+        <p class="profile-name">{{ site.author.name }}</p>
+        <p class="profile-role">{{ site.author.role }}</p>
+        <p class="profile-school">{{ site.author.focus }}</p>
+        {% if site.author.location %}<p class="profile-location">{% include academic/icon.html name="location" %} {{ site.author.location }}</p>{% endif %}
+        <ul class="profile-links">
+          <li><a href="mailto:{{ site.author.email }}">{% include academic/icon.html name="email" %} {{ site.author.email }}</a></li>
+          <li><a href="https://github.com/{{ site.author.github }}">{% include academic/icon.html name="github" %} GitHub</a></li>
+        </ul>
+        <p class="profile-focus">AI Security<br>Trustworthy Language Models<br>Automated Penetration Testing</p>
+      </div>
+    </aside>
+    <main id="main-content" class="main-content" tabindex="-1">
+      {% unless page.home %}<h1>{{ page.title }}</h1>{% endunless %}
+      {{ content }}
+    </main>
+  </div>
+  <footer class="site-footer"><div><span>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}</span><span>Built with <a href="https://jekyllrb.com/">Jekyll</a> · <a href="https://github.com/{{ site.repository }}">Source</a></span></div></footer>
+</body>
+</html>

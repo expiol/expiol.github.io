@@ -1,10 +1,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Yang Hong - Academic Homepage"
+title                    : "Yang Hong"
 title_separator          : "-"
 name                     : &name "Yang Hong"
-description              : &description "Yang Hong's academic portfolio in cybersecurity and AI"
+description              : &description "Yang Hong is building a startup, with a research background in AI and cybersecurity. Incoming M.S. student in Security Informatics at Johns Hopkins University."
 url                      : https://expiol.github.io    # Your GitHub Pages URL
 baseurl                  : "" 
 repository               : "expiol/expiol.github.io"   # Replace with your repo name if different
@@ -14,11 +14,13 @@ author:
   avatar           : "1.png"
   name             : "Yang Hong"
   pronouns         : "he/him"  
-  bio              : "Undergraduate researcher in cybersecurity and large language models at XJTLU."
-  location         : "Suzhou, China"
-  employer         : "Xi’an Jiaotong-Liverpool University"
+  bio              : "Building a startup · AI & cybersecurity research"
+  role             : "Building a startup"
+  focus            : "AI & cybersecurity research"
+  location         :
+  employer         :
   uri              : https://expiol.github.io
-  email            : "yang.hong22@student.xjtlu.edu.cn"
+  email            : "yhong51@jh.edu"
 
   # Academic websites
   googlescholar    : # Add your Google Scholar when available
@@ -46,7 +48,7 @@ publication_category:
 teaser                   : 
 breadcrumbs              : false
 words_per_minute         : 160
-future                   : true
+future                   : false
 read_more                : "disabled"
 talkmap_link             : false
 comments:
@@ -71,6 +73,42 @@ include:
   - _pages
   - files
 exclude:
+  - files/Yang-Hong-CV.pdf
+  - _posts
+  - _drafts
+  - _talks
+  - _teaching
+  - _portfolio
+  - talkmap
+  - markdown_generator
+  - scripts
+  - CONTRIBUTING.md
+  - README.md
+  - docker-compose.yaml
+  - talkmap.py
+  - talkmap.ipynb
+  - talkmap_out.ipynb
+  - _pages/archive-layout-with-content.md
+  - _pages/category-archive.html
+  - _pages/collection-archive.html
+  - _pages/cv-json.md
+  - _pages/markdown.md
+  - _pages/non-menu-page.md
+  - _pages/page-archive.html
+  - _pages/portfolio.html
+  - _pages/tag-archive.html
+  - _pages/talkmap.html
+  - _pages/talks.html
+  - _pages/teaching.html
+  - _pages/terms.md
+  - _pages/year-archive.html
+  - files/bibtex1.bib
+  - files/paper1.pdf
+  - files/paper2.pdf
+  - files/paper3.pdf
+  - files/slides1.pdf
+  - files/slides2.pdf
+  - files/slides3.pdf
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -166,7 +204,7 @@ defaults:
       path: ""
       type: publications
     values:
-      layout: single
+      layout: academic-publication
       author_profile: true
       share: true
       comments: false

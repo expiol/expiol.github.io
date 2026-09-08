@@ -1,0 +1,12 @@
+---
+layout: academic
+---
+<p class="authors">{% include academic/authors.html authors=page.authors %}</p>
+<p class="publication-heading"><span class="venue{% if page.category == 'manuscripts' %} venue-preprint{% endif %}">{{ page.venue_short }}</span><span class="publication-year">{{ page.date | date: '%Y' }}</span></p>
+<div class="paper-links">
+  {% if page.paperurl %}<a href="{{ page.paperurl }}">{% if page.arxiv %}Read on arXiv{% else %}Read paper{% endif %} ↗</a>{% endif %}
+  {% if page.pdfurl %}<a href="{{ page.pdfurl }}">PDF ↗</a>{% endif %}
+</div>
+<div class="paper-content">{{ content }}</div>
+{% if page.bibtex %}<h2>Citation</h2><pre class="bibtex"><code>{{ page.bibtex | escape }}</code></pre>{% endif %}
+<p><a href="{{ '/publications/' | relative_url }}">← All publications</a></p>

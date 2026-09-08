@@ -1,0 +1,14 @@
+<div class="experience-list">
+{% for item in include.items %}
+  <article class="experience-item">
+    <div class="entry-heading"><h3>{{ item.institution }}</h3><span class="entry-date">{{ item.dates }}</span></div>
+    <p class="entry-role">{{ item.role }}{% if item.collaborator %} · With {{ item.collaborator }}{% elsif item.advisor %} · Advisor: {{ item.advisor }}{% endif %}</p>
+    {% if item.status %}<p class="entry-status">{{ item.status }}</p>{% endif %}
+    {% unless include.compact %}
+    {% if item.project %}<h4>{{ item.project }}</h4>{% endif %}
+    <p>{{ item.summary }}</p>
+    {% if item.paper %}<a class="experience-paper" href="{{ item.paper }}">Related paper <span aria-hidden="true">↗</span></a>{% endif %}
+    {% endunless %}
+  </article>
+{% endfor %}
+</div>

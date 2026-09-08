@@ -1,0 +1,23 @@
+{% assign papers = site.publications | sort: 'date' | reverse %}
+{% assign group_heading = 'h3' %}{% assign paper_heading = 'h4' %}
+{% if include.standalone %}{% assign group_heading = 'h2' %}{% assign paper_heading = 'h3' %}{% endif %}
+{% for group in site.data.academic.publication_groups %}
+<div class="publication-group">
+  <{{ group_heading }} class="group-title">{{ group.title }}</{{ group_heading }}>
+  <ol class="publication-list">
+    {% for paper in papers %}{% if paper.topic == group.id %}
+    <li class="publication" id="{{ paper.slug }}">
+      <div class="publication-heading"><span class="venue{% if paper.category == 'manuscripts' %} venue-preprint{% endif %}">{{ paper.venue_short }}</span><span class="publication-year">{{ paper.date | date: '%Y' }}</span></div>
+      <{{ paper_heading }} class="paper-title"><a href="{% if paper.paperurl %}{{ paper.paperurl }}{% else %}{{ paper.url | relative_url }}{% endif %}">{{ paper.title }}</a></{{ paper_heading }}>
+      <p class="authors">{% include academic/authors.html authors=paper.authors %}</p>
+      <p class="paper-summary">{{ paper.summary }}</p>
+      <div class="paper-links">
+        {% if paper.paperurl %}<a href="{{ paper.paperurl }}">{% if paper.arxiv %}arXiv{% else %}Paper{% endif %}<span aria-hidden="true"> ↗</span></a>{% endif %}
+        {% if paper.pdfurl %}<a href="{{ paper.pdfurl }}">PDF<span aria-hidden="true"> ↗</span></a>{% endif %}
+        <a href="{{ paper.url | relative_url }}">Details &amp; citation<span aria-hidden="true"> →</span></a>
+      </div>
+    </li>
+    {% endif %}{% endfor %}
+  </ol>
+</div>
+{% endfor %}

@@ -1,0 +1,48 @@
+# Background from Yang Hong's CV; current status and enrollment updated by the owner.
+# Publications live in _publications and are shared by every page.
+publication_groups:
+  - id: llm-security
+    title: LLM & Multi-Agent Security
+  - id: penetration-testing
+    title: Automated Penetration Testing
+
+education:
+  - institution: Johns Hopkins University
+    mark: JHU
+    url: https://www.jhu.edu/
+    degree: Master of Science in Security Informatics
+    dates: Starting Spring 2027
+    status: Incoming student
+  - institution: Xi'an Jiaotong-Liverpool University
+    mark: XJTLU
+    url: https://www.xjtlu.edu.cn/en/
+    degree: Bachelor of Information and Computing Science
+    dates: Sep 2022 – Jun 2026
+    location: Suzhou, China
+
+research:
+  - institution: Johns Hopkins University
+    role: Research collaboration
+    collaborator: Rui Yang (Ph.D. student)
+    dates: Started Jun 2026
+    status: Currently paused; planning to resume after joining JHU.
+    project: Evaluating Cybersecurity Assistance across Conversational Contexts
+    summary: Evaluated how conversation history changes the boundary between helpful cybersecurity assistance and safety-related refusal for otherwise identical requests. The resulting paper was co-authored with Prof. Yinzhi Cao.
+    paper: https://arxiv.org/abs/2609.00578
+  - institution: Xi'an Jiaotong-Liverpool University
+    role: Research Assistant
+    advisor: Prof. Wenjun Fan
+    dates: Aug 2024 – Oct 2024
+    project: Leveraging Large Language Models for CTF Challenge Solving
+    summary: Built an LLM-assisted CTF-solving framework combining attack-chain decision trees, command execution, and agent feedback. This work was published at TrustCom 2024.
+    paper: https://doi.org/10.1109/TrustCom63139.2024.00213
+
+internships:
+  - institution: DBAPPSecurity · Central Research Institute
+    role: Cybersecurity Research Intern
+    dates: May 2025 – Jul 2025
+    summary: Developed security-agent components for malicious traffic analysis, attacker kill-chain identification, and fine-grained security alert classification in Hangzhou, China.
+  - institution: Edscha
+    role: Network Security Maintenance Intern
+    dates: Jan 2025 – Feb 2025
+    summary: Supported server and network monitoring, automated incident response, and vulnerability assessment in Hefei, China.
