@@ -22,15 +22,21 @@ GitHub Pages publishes from the root of the default branch, `master-/root`, at h
 
 ## Updating content
 
-- `_config.yml`: name, email, photo, location, site URL, and publishing settings.
+- `_config.yml`: name, email, photo, location, site URL, and publishing settings. `author.interests` is the single source for both the sidebar focus list and the homepage interest tags, so edit it in one place.
 - `_pages/about.md`: introduction, research interests, and news.
 - `_data/academic.yml`: public education, brief research experience, internships, and publication groups. This data is shared by the homepage and CV. Keep private CV details out of this file.
-- `_publications/`: one Markdown file per paper. The homepage, publications page, and CV all read this collection. Use an existing file as a template, with `authors`, `topic`, `date`, `venue_short`, `summary`, `paperurl`, and `bibtex`. Optional `arxiv` and `pdfurl` fields enable preprint and PDF links.
+- `_publications/`: one Markdown file per paper. The homepage, publications page, and CV all read this collection. Use an existing file as a template, with `authors`, `topic`, `date`, `venue_short`, `summary`, `paperurl`, and `bibtex`. Optional `arxiv`, `pdfurl`, and `citation` fields enable preprint links, PDF links, and a formatted citation line. These fields also drive the Google Scholar `citation_*` tags and the `ScholarlyArticle` structured data, so keep `authors`, `date`, and `venue` accurate. Give every `permalink` a trailing slash.
 - `_pages/cv.md`: a brief HTML CV showing education, institutions and roles, and paper titles. Omit task-level work descriptions, skills inventories, and detailed project contributions. The source CV PDF remains private: do not copy it into the repository or add a download link. Its former public path is also excluded from the build.
-- `assets/css/academic.css`: responsive layout and print styles; no JavaScript or Node build is needed.
-- `_layouts/academic.html` and `_includes/academic/`: shared page structure and rendering.
+- `assets/css/academic.css`: responsive layout, print styles, and a light/dark theme; no JavaScript or Node build is needed. All colours are CSS custom properties defined once at the top; the dark theme only overrides those tokens, so add new colours as tokens rather than inline hex values.
+- `_layouts/academic.html` and `_includes/academic/`: shared page structure and rendering, including the SEO metadata, Open Graph and Twitter share tags, Google Scholar citation tags, favicons, and JSON-LD.
 
 Existing `/`, `/publications/`, `/cv/`, and TrustCom publication URLs are retained. `/about/`, `/about.html`, and `/resume` redirect to their current pages. Unused Academic Pages sample content is retained in the repository but excluded from the generated site via `_config.yml`.
+
+## Images and icons
+
+The site ships only what a page actually references. `images/yang-hong.jpg` is the portrait, pre-cropped square at 400×400 so the CSS needs no `object-position`; regenerate it at that size if the photo changes rather than pointing the config at a full-resolution file. The favicons (`favicon.ico`, `favicon-32x32.png`, `apple-touch-icon-180x180.png`, `favicon-192x192.png`, `favicon-512x512.png`) are all rendered from `images/monogram.svg`, so regenerate the set from that file to keep them consistent.
+
+Unused Academic Pages assets — the old Minimal Mistakes stylesheets, JavaScript, Font Awesome and Academicons webfonts, and sample images — stay in the repository but are listed in the `exclude` block of `_config.yml`, because the academic layout references none of them. Check that before adding anything to `images/` or `assets/`.
 
 ## Content sources
 

@@ -28,5 +28,3 @@ bibtex: |
 ## Overview
 
 We introduce 3R-Bench, a benchmark of 150 cybersecurity requests with controlled conversational settings. Evaluations of eight language models show that prior assistant behavior and dialogue decomposition can substantially change whether a model assists with the same request. The study examines the boundary between legitimate security assistance and refusal.
-
-This work is available as an arXiv preprint, submitted on September 1, 2026.

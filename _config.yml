@@ -4,23 +4,28 @@ site_theme               : "default"
 title                    : "Yang Hong"
 title_separator          : "-"
 name                     : &name "Yang Hong"
-description              : &description "Yang Hong is building a startup, with a research background in AI and cybersecurity. Incoming M.S. student in Security Informatics at Johns Hopkins University."
+description              : &description "Yang Hong is building a startup and researching AI security: language model safety, multi-agent systems, and automated penetration testing. Incoming M.S. student at Johns Hopkins University."
 url                      : https://expiol.github.io    # Your GitHub Pages URL
 baseurl                  : "" 
 repository               : "expiol/expiol.github.io"   # Replace with your repo name if different
 
 # Site Author - Sidebar Information
 author:
-  avatar           : "1.png"
+  avatar           : "yang-hong.jpg"
   name             : "Yang Hong"
-  pronouns         : "he/him"  
-  bio              : "Building a startup · AI & cybersecurity research"
+  pronouns         : "he/him"
   role             : "Building a startup"
-  focus            : "AI & cybersecurity research"
+  focus            : "AI security research"
   location         :
   employer         :
   uri              : https://expiol.github.io
   email            : "yhong51@jh.edu"
+
+  # Single source for the sidebar focus list and the homepage interest tags
+  interests:
+    - "LLM safety & privacy"
+    - "Multi-agent security"
+    - "Automated penetration testing"
 
   # Academic websites
   googlescholar    : # Add your Google Scholar when available
@@ -53,9 +58,6 @@ read_more                : "disabled"
 talkmap_link             : false
 comments:
   provider               : false 
-
-atom_feed:
-  hide                   : false     
 
 # SEO
 google_site_verification :
@@ -116,9 +118,20 @@ exclude:
   - .github
   - .jekyll-assets-cache
   - .sass-cache
-  - assets/js/_main.js
-  - assets/js/plugins
-  - assets/js/vendor
+  - assets/css/main.scss
+  - assets/css/academicons.css
+  - assets/css/academicons.min.css
+  - assets/css/collapse.css
+  - assets/js
+  - assets/fonts
+  - assets/webfonts
+  - images/1.png
+  - images/500x300.png
+  - images/bio-photo.jpg
+  - images/bio-photo-2.jpg
+  - images/editing-talk.png
+  - images/profile.png
+  - images/themes
   - CHANGELOG
   - Capfile
   - config
@@ -235,20 +248,12 @@ timezone: Asia/Shanghai
 
 # Plugins
 plugins:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
-  - jemoji
 
 whitelist:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
-  - jemoji
 
 # Archives
 category_archive:
@@ -257,9 +262,3 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
-
-# HTML Compression
-compress_html:
-  clippings: all
-  ignore:
-    envs: development

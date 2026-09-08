@@ -6,7 +6,7 @@ redirect_from:
   - /resume
 ---
 
-<p class="page-lead">Yang Hong · Building a startup · AI &amp; cybersecurity research</p>
+<p class="page-lead">A brief public overview of my education, research, industry experience, and publications. For anything not listed here, feel free to <a href="mailto:{{ site.author.email }}">email me</a>.</p>
 
 <section class="home-section" aria-labelledby="cv-education"><h2 id="cv-education">Education</h2>
 {% include academic/education.html %}

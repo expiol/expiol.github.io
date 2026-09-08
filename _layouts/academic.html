@@ -6,6 +6,7 @@
   {% assign page_title = page.title %}
   {% unless page.home %}{% assign page_title = page.title | append: ' - ' | append: site.title %}{% endunless %}
   {% assign page_description = page.description | default: page.summary | default: site.description %}
+  {% assign share_image = site.author.avatar | prepend: '/images/' | absolute_url %}
   <title>{{ page_title | escape }}</title>
   <meta name="description" content="{{ page_description | escape }}">
   <meta name="author" content="{{ site.author.name }}">
@@ -15,9 +16,55 @@
   <meta property="og:type" content="{% if page.collection == 'publications' %}article{% else %}website{% endif %}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:locale" content="{{ site.locale | replace: '-', '_' }}">
+  <meta property="og:image" content="{{ share_image }}">
+  <meta property="og:image:alt" content="Portrait of {{ site.author.name }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="{{ share_image }}">
+  {% comment %}Google Scholar indexing tags — see https://scholar.google.com/intl/en/scholar/inclusion.html{% endcomment %}
+  {% if page.collection == 'publications' %}
+  <meta name="citation_title" content="{{ page.title | escape }}">
+  {% for author in page.authors %}<meta name="citation_author" content="{{ author | escape }}">
+  {% endfor %}<meta name="citation_publication_date" content="{{ page.date | date: '%Y/%m/%d' }}">
+  {% if page.arxiv %}<meta name="citation_arxiv_id" content="{{ page.arxiv }}">
+  <meta name="citation_technical_report_institution" content="arXiv">
+  {% else %}<meta name="citation_conference_title" content="{{ page.venue | escape }}">
+  {% endif %}{% if page.pdfurl %}<meta name="citation_pdf_url" content="{{ page.pdfurl }}">
+  {% endif %}{% if page.paperurl %}<meta name="citation_abstract_html_url" content="{{ page.paperurl }}">
+  {% endif %}{% endif %}
   <link rel="icon" type="image/svg+xml" href="{{ '/images/monogram.svg' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/favicon-32x32.png' | relative_url }}">
+  <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}" sizes="48x48">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/apple-touch-icon-180x180.png' | relative_url }}">
+  <link rel="manifest" href="{{ '/images/manifest.json' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/academic.css' | relative_url }}">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181c">
+  <script type="application/ld+json">{% if page.collection == 'publications' %}
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": {{ page.title | jsonify }},
+    "name": {{ page.title | jsonify }},
+    "author": [{% for author in page.authors %}{"@type": "Person", "name": {{ author | jsonify }}}{% unless forloop.last %}, {% endunless %}{% endfor %}],
+    "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
+    "isPartOf": {"@type": "CreativeWork", "name": {{ page.venue | jsonify }}},
+    "url": "{{ page.url | absolute_url }}"{% if page.paperurl %},
+    "sameAs": {{ page.paperurl | jsonify }}{% endif %}
+  }{% else %}
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": {{ site.author.name | jsonify }},
+    "url": "{{ '/' | absolute_url }}",
+    "image": "{{ share_image }}",
+    "email": "mailto:{{ site.author.email }}",
+    "description": {{ site.description | jsonify }},
+    "knowsAbout": {{ site.author.interests | jsonify }},
+    "alumniOf": [{% for item in site.data.academic.education %}{% unless item.status %}{"@type": "CollegeOrUniversity", "name": {{ item.institution | jsonify }}}{% endunless %}{% endfor %}],
+    "sameAs": ["https://github.com/{{ site.author.github }}"]
+  }{% endif %}
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -25,14 +72,19 @@
     <nav class="site-nav" aria-label="Main navigation">
       <a class="site-name" href="{{ '/' | relative_url }}">{{ site.author.name }}</a>
       <div class="nav-links">{% for link in site.data.navigation.main %}
-        <a href="{{ link.url | relative_url }}"{% if page.url == link.url %} aria-current="page"{% endif %}>{{ link.title }}</a>
+        {% assign is_current = false %}
+        {% if page.url == link.url %}{% assign is_current = true %}
+        {% elsif link.url contains '#publications' and page.collection == 'publications' %}{% assign is_current = true %}
+        {% elsif link.url contains '#publications' and page.url == '/publications/' %}{% assign is_current = true %}
+        {% endif %}
+        <a href="{{ link.url | relative_url }}"{% if is_current %} aria-current="page"{% endif %}>{{ link.title }}</a>
       {% endfor %}</div>
     </nav>
   </header>
   <div class="site-shell">
-    <aside class="profile" aria-label="About Yang Hong">
-      <a class="portrait-link" href="{{ '/' | relative_url }}" aria-label="Yang Hong's homepage">
-        <img class="portrait" src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="Portrait of Yang Hong" width="168" height="168" fetchpriority="high">
+    <aside class="profile" aria-label="About {{ site.author.name }}">
+      <a class="portrait-link" href="{{ '/' | relative_url }}" aria-label="{{ site.author.name }}'s homepage">
+        <img class="portrait" src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="Portrait of {{ site.author.name }}" width="400" height="400" fetchpriority="high">
       </a>
       <div class="profile-details">
         <p class="profile-name">{{ site.author.name }}</p>
@@ -43,7 +95,9 @@
           <li><a href="mailto:{{ site.author.email }}">{% include academic/icon.html name="email" %} {{ site.author.email }}</a></li>
           <li><a href="https://github.com/{{ site.author.github }}">{% include academic/icon.html name="github" %} GitHub</a></li>
         </ul>
-        <p class="profile-focus">AI Security<br>Trustworthy Language Models<br>Automated Penetration Testing</p>
+        <ul class="profile-focus">{% for interest in site.author.interests %}
+          <li>{{ interest }}</li>{% endfor %}
+        </ul>
       </div>
     </aside>
     <main id="main-content" class="main-content" tabindex="-1">

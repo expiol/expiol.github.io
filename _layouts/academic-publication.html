@@ -8,5 +8,8 @@ layout: academic
   {% if page.pdfurl %}<a href="{{ page.pdfurl }}">PDF ↗</a>{% endif %}
 </div>
 <div class="paper-content">{{ content }}</div>
-{% if page.bibtex %}<h2>Citation</h2><pre class="bibtex"><code>{{ page.bibtex | escape }}</code></pre>{% endif %}
+{% if page.citation or page.bibtex %}<h2>Citation</h2>
+{% if page.citation %}<p class="formatted-citation">{{ page.citation }}</p>{% endif %}
+{% if page.bibtex %}<pre class="bibtex"><code>{{ page.bibtex | escape }}</code></pre>{% endif %}
+{% endif %}
 <p><a href="{{ '/publications/' | relative_url }}">← All publications</a></p>

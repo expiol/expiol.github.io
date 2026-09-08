@@ -1,5 +1,10 @@
 {
-	"name": "OOjs UI icon academic-progressive",
+	"name": "Yang Hong",
+	"short_name": "Yang Hong",
+	"start_url": "/",
+	"display": "browser",
+	"theme_color": "#174f78",
+	"background_color": "#ffffff",
 	"icons": [
 		{
 			"src": "/images/favicon-192x192.png",

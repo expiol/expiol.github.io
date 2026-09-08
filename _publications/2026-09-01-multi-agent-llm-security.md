@@ -28,5 +28,3 @@ bibtex: |
 ## Overview
 
 This systematization examines how interactions between individually safe agents can produce system-level security failures. Through an execution-centered analysis of 197 works, we organize attacks by adversary position, interaction interface, and resulting risk. We also analyze defense contracts and audit 44 evaluation and benchmark works to identify challenges in tracing attacks, closing attack paths, and recovering from failures.
-
-This work is available as an arXiv preprint, submitted on September 1, 2026.

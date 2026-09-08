@@ -7,9 +7,11 @@ slug: trustcom-ctf-llm
 venue_short: TrustCom
 authors: [Yuwen Zou, Yang Hong, Jingyi Xu, Lekun Liu, Wenjun Fan]
 summary: "An LLM-based framework for CTF challenge solving with automated tool execution and human-validated evaluation."
-permalink: /publication/2024-trustcom-ctf-llm
+permalink: /publication/2024-trustcom-ctf-llm/
+redirect_from:
+  - /publication/2024-trustcom-ctf-llm.html
 excerpt: 'This paper introduces an automated LLM-based framework for solving Capture-the-Flag challenges, bridging penetration testing and AI research.'
-date: 2024-12-01
+date: 2024-12-17
 venue: '2024 IEEE 23rd International Conference on Trust, Security and Privacy in Computing and Communications (TrustCom)'
 paperurl: 'https://ieeexplore.ieee.org/document/10944976'
 citation: 'Y. Zou, <b>Y. Hong</b>, J. Xu, L. Liu and W. Fan, "Leveraging Large Language Models for Challenge Solving in Capture-the-Flag," <i>2024 IEEE 23rd International Conference on Trust, Security and Privacy in Computing and Communications (TrustCom)</i>, Sanya, China, 2024, pp. 1541-1550. doi: 10.1109/TrustCom63139.2024.00213.'
