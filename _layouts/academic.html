@@ -37,6 +37,7 @@
   <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}" sizes="48x48">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/apple-touch-icon-180x180.png' | relative_url }}">
   <link rel="manifest" href="{{ '/images/manifest.json' | relative_url }}">
+  <script>try { const theme = localStorage.getItem('theme'); if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme; } catch (e) {}</script>
   <link rel="stylesheet" href="{{ '/assets/css/academic.css' | relative_url }}">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14181c">
@@ -69,6 +70,7 @@
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
+    <div class="scroll-progress" aria-hidden="true"></div>
     <nav class="site-nav" aria-label="Main navigation">
       <a class="site-name" href="{{ '/' | relative_url }}">{{ site.author.name }}</a>
       <div class="nav-links">{% for link in site.data.navigation.main %}
@@ -78,7 +80,9 @@
         {% elsif link.url contains '#publications' and page.url == '/publications/' %}{% assign is_current = true %}
         {% endif %}
         <a href="{{ link.url | relative_url }}"{% if is_current %} aria-current="page"{% endif %}>{{ link.title }}</a>
-      {% endfor %}</div>
+      {% endfor %}
+        <button class="theme-toggle" type="button" aria-label="Switch theme" hidden>{% include academic/icon.html name="moon" class="icon-moon" %}{% include academic/icon.html name="sun" class="icon-sun" %}</button>
+      </div>
     </nav>
   </header>
   <div class="site-shell">
@@ -88,23 +92,24 @@
       </a>
       <div class="profile-details">
         <p class="profile-name">{{ site.author.name }}</p>
-        <p class="profile-role">{{ site.author.role }}</p>
-        <p class="profile-school">{{ site.author.focus }}</p>
+        {% unless page.home %}<p class="profile-role">{{ site.author.role }}</p>
+        <p class="profile-school">{{ site.author.focus }}</p>{% endunless %}
         {% if site.author.location %}<p class="profile-location">{% include academic/icon.html name="location" %} {{ site.author.location }}</p>{% endif %}
         <ul class="profile-links">
           <li><a href="mailto:{{ site.author.email }}">{% include academic/icon.html name="email" %} {{ site.author.email }}</a></li>
           <li><a href="https://github.com/{{ site.author.github }}">{% include academic/icon.html name="github" %} GitHub</a></li>
         </ul>
-        <ul class="profile-focus">{% for interest in site.author.interests %}
+        {% unless page.home %}<ul class="profile-focus">{% for interest in site.author.interests %}
           <li>{{ interest }}</li>{% endfor %}
-        </ul>
+        </ul>{% endunless %}
       </div>
     </aside>
     <main id="main-content" class="main-content" tabindex="-1">
-      {% unless page.home %}<h1>{{ page.title }}</h1>{% endunless %}
+      {% unless page.home %}<h1{% if page.collection == 'publications' %} class="paper-page-title"{% endif %}>{{ page.title }}</h1>{% endunless %}
       {{ content }}
     </main>
   </div>
   <footer class="site-footer"><div><span>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}</span><span>Built with <a href="https://jekyllrb.com/">Jekyll</a> · <a href="https://github.com/{{ site.repository }}">Source</a></span></div></footer>
+  {% include academic/scripts.html %}
 </body>
 </html>

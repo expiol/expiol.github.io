@@ -4,12 +4,15 @@ layout: academic
 <p class="authors">{% include academic/authors.html authors=page.authors %}</p>
 <p class="publication-heading"><span class="venue{% if page.category == 'manuscripts' %} venue-preprint{% endif %}">{{ page.venue_short }}</span><span class="publication-year">{{ page.date | date: '%Y' }}</span></p>
 <div class="paper-links">
-  {% if page.paperurl %}<a href="{{ page.paperurl }}">{% if page.arxiv %}Read on arXiv{% else %}Read paper{% endif %} ↗</a>{% endif %}
-  {% if page.pdfurl %}<a href="{{ page.pdfurl }}">PDF ↗</a>{% endif %}
+  {% if page.paperurl %}<a href="{{ page.paperurl }}">{% if page.arxiv %}Read on arXiv{% else %}Read paper{% endif %}<span class="arrow-ext" aria-hidden="true"> ↗</span></a>{% endif %}
+  {% if page.pdfurl %}<a href="{{ page.pdfurl }}">PDF<span class="arrow-ext" aria-hidden="true"> ↗</span></a>{% endif %}
 </div>
 <div class="paper-content">{{ content }}</div>
 {% if page.citation or page.bibtex %}<h2>Citation</h2>
 {% if page.citation %}<p class="formatted-citation">{{ page.citation }}</p>{% endif %}
-{% if page.bibtex %}<pre class="bibtex"><code>{{ page.bibtex | escape }}</code></pre>{% endif %}
+{% if page.bibtex %}<div class="bibtex-block">
+  <pre class="bibtex"><code id="bibtex">{{ page.bibtex | escape }}</code></pre>
+  <button class="copy-button" type="button" aria-controls="bibtex" hidden><span class="copy-label" aria-live="polite">Copy</span></button>
+</div>{% endif %}
 {% endif %}
-<p><a href="{{ '/publications/' | relative_url }}">← All publications</a></p>
+<p><a class="back-link" href="{{ '/publications/' | relative_url }}"><span class="arrow-back" aria-hidden="true">← </span>All publications</a></p>

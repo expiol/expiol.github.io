@@ -12,9 +12,9 @@
       <p class="authors">{% include academic/authors.html authors=paper.authors %}</p>
       <p class="paper-summary">{{ paper.summary }}</p>
       <div class="paper-links">
-        {% if paper.paperurl %}<a href="{{ paper.paperurl }}">{% if paper.arxiv %}arXiv{% else %}Paper{% endif %}<span aria-hidden="true"> ↗</span></a>{% endif %}
-        {% if paper.pdfurl %}<a href="{{ paper.pdfurl }}">PDF<span aria-hidden="true"> ↗</span></a>{% endif %}
-        <a href="{{ paper.url | relative_url }}">Details &amp; citation<span aria-hidden="true"> →</span></a>
+        {% if paper.paperurl %}<a href="{{ paper.paperurl }}">{% if paper.arxiv %}arXiv{% else %}Paper{% endif %}<span class="arrow-ext" aria-hidden="true"> ↗</span></a>{% endif %}
+        {% if paper.pdfurl %}<a href="{{ paper.pdfurl }}">PDF<span class="arrow-ext" aria-hidden="true"> ↗</span></a>{% endif %}
+        <a href="{{ paper.url | relative_url }}">Details &amp; citation<span class="arrow" aria-hidden="true"> →</span></a>
       </div>
     </li>
     {% endif %}{% endfor %}

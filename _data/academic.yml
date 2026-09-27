@@ -26,17 +26,23 @@ research:
     role: Research collaboration
     collaborator: Rui Yang (Ph.D. student)
     dates: Started Jun 2026
-    status: Currently paused; planning to resume after joining JHU.
-    project: Evaluating Cybersecurity Assistance across Conversational Contexts
-    summary: Evaluated how conversation history shifts the boundary between helpful cybersecurity assistance and refusal when the underlying request is identical. The resulting paper was co-authored with Prof. Yinzhi Cao.
-    paper: https://arxiv.org/abs/2609.00578
+    status: Planned to resume once I start at JHU in Spring 2027.
+    project: LLM and Multi-Agent Security
+    summary: Evaluated how conversation history shifts the boundary between helpful cybersecurity assistance and refusal when the underlying request is identical, and contributed to a systematization of multi-agent LLM security. Both papers are co-authored with Prof. Yinzhi Cao.
+    papers:
+      - label: 3R-Bench preprint
+        url: https://arxiv.org/abs/2609.00578
+      - label: SoK preprint
+        url: https://arxiv.org/abs/2609.00595
   - institution: Xi'an Jiaotong-Liverpool University
     role: Research Assistant
     advisor: Prof. Wenjun Fan
     dates: Aug 2024 – Oct 2024
     project: Leveraging Large Language Models for CTF Challenge Solving
     summary: Built an LLM-assisted CTF-solving framework combining attack-chain decision trees, command execution, and agent feedback. Published at TrustCom 2024.
-    paper: https://doi.org/10.1109/TrustCom63139.2024.00213
+    papers:
+      - label: Paper
+        url: https://doi.org/10.1109/TrustCom63139.2024.00213
 
 internships:
   - institution: DBAPPSecurity · Central Research Institute

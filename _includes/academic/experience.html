@@ -7,7 +7,7 @@
     {% unless include.compact %}
     {% if item.project %}<h4>{{ item.project }}</h4>{% endif %}
     <p>{{ item.summary }}</p>
-    {% if item.paper %}<a class="experience-paper" href="{{ item.paper }}">Related paper <span aria-hidden="true">↗</span></a>{% endif %}
+    {% if item.papers %}<div class="experience-papers">{% for paper in item.papers %}<a href="{{ paper.url }}">{{ paper.label }}<span class="arrow-ext" aria-hidden="true"> ↗</span></a>{% endfor %}</div>{% endif %}
     {% endunless %}
   </article>
 {% endfor %}

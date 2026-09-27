@@ -27,5 +27,5 @@ redirect_from:
   <li><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a><span class="entry-meta">{{ paper.venue_short }} · {{ paper.date | date: '%Y' }}</span></li>
 {% endfor %}
 </ul>
-<p><a href="{{ '/publications/' | relative_url }}">Full publication details →</a></p>
+<p><a href="{{ '/publications/' | relative_url }}">Full publication details<span class="arrow" aria-hidden="true"> →</span></a></p>
 </section>
