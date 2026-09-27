@@ -1,7 +1,7 @@
 /* Every colour token holds its light and dark value; color-scheme picks one.
-   The system preference decides unless the theme toggle sets data-theme. */
+   Light is the default whatever the system uses; the toggle sets data-theme="dark". */
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
   --bg: light-dark(#fff, #14181c);
   --text: light-dark(#303b45, #c3ccd5);
   --heading: light-dark(#1d2c3a, #e9eff5);
@@ -30,7 +30,6 @@
   --shadow: light-dark(rgba(24,44,64,.08), rgba(0,0,0,.4));
   --ease: cubic-bezier(.2,.7,.2,1);
 }
-:root[data-theme="light"] { color-scheme: light; }
 :root[data-theme="dark"] { color-scheme: dark; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 100px; }

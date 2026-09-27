@@ -8,13 +8,11 @@
   addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // Theme toggle. Picking the theme the system already uses clears the
-  // override, so the page follows the system again.
+  // Theme toggle. Light is the default; only a dark choice is stored.
   const root = document.documentElement;
-  const systemDark = matchMedia('(prefers-color-scheme: dark)');
   const toggle = document.querySelector('.theme-toggle');
   const themeColors = document.querySelectorAll('meta[name="theme-color"]');
-  const currentTheme = () => root.dataset.theme || (systemDark.matches ? 'dark' : 'light');
+  const currentTheme = () => root.dataset.theme || 'light';
   const syncToggle = () => {
     const theme = currentTheme();
     toggle.dataset.current = theme;
@@ -23,12 +21,11 @@
     themeColors.forEach((meta) => { meta.content = background; });
   };
   const setTheme = (theme) => {
-    const followsSystem = theme === (systemDark.matches ? 'dark' : 'light');
-    if (followsSystem) delete root.dataset.theme;
-    else root.dataset.theme = theme;
+    if (theme === 'dark') root.dataset.theme = 'dark';
+    else delete root.dataset.theme;
     try {
-      if (followsSystem) localStorage.removeItem('theme');
-      else localStorage.setItem('theme', theme);
+      if (theme === 'dark') localStorage.setItem('theme', 'dark');
+      else localStorage.removeItem('theme');
     } catch {}
     syncToggle();
   };
@@ -47,7 +44,6 @@
     ));
     transition.finished.finally(() => root.classList.remove('theme-switching'));
   });
-  systemDark.addEventListener('change', syncToggle);
   syncToggle();
   toggle.hidden = false;
 
